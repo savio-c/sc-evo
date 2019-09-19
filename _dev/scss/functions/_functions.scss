@@ -1,0 +1,52 @@
+
+
+// Esempio : strip-unit(12px) restituisce-> 12;
+@function strip-unit($number) {
+  @if type-of($number) == 'number' {
+    @return $number / ($number * 0 + 1);
+  } @else {
+    @error 'nella funzione strip-unit #{$number} non è un numero';
+  }
+}
+
+// Converte il numero value(s) in rem,
+// basandosi sulla variabile $font-size-root.
+// Esempio : rem-calc(14px 16px 0) restituisce-> 0.875rem 1rem 0
+@function rem-calc($values) {
+  $rem-values: ();
+  @each $value in $values {
+    @if ($value > 0) {
+      $value: strip-unit($value) / strip-unit($font-size-root) * 1rem;
+    } @else {
+      $value: 0; // ensure that `0rem` becomes unitless
+    }
+    $rem-values: append($rem-values, $value);
+  }
+  @return $rem-values;
+}
+
+// color
+@function color($color-name, $alpha:1) {
+    $color: map-get($color_and_gray, $color-name);
+    @return rgba($color, $alpha);
+}
+
+//color alt
+@function color-alt($color) {
+  @if (lightness($color) > $range-color-alt) {
+    @return $color-text-alt; // Lighter backgorund, return dark color
+  } @else {
+    @return $color-text; // Darker background, return light color
+  }
+}
+
+// string replace
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 99) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}

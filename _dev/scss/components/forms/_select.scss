@@ -1,0 +1,83 @@
+@mixin component__form-select {
+
+  %select-height-default {
+    font-size: rem-calc(map-get(map-get($input-list, default), 'font-size'));
+    padding: map-get(map-get($input-list, default), 'padding');
+    height: rem-calc(map-get(map-get($input-list, default), 'height'));
+    select{
+      height: rem-calc(map-get(map-get($input-list, default), 'height'));
+    }
+  }
+
+  %select-height {
+    @each $input-name, $input-options in map-remove($input-list, default) {
+      &.is-#{$input-name} {
+
+        @if type-of($input-options) == 'map' {
+          @if map-has-key($input-options, 'font-size') {
+            font-size: rem-calc(map-get($input-options, 'font-size'));
+          }
+
+          @if map-has-key($input-options, 'height') {
+            height: rem-calc(map-get($input-options, 'height'));
+            select{
+              height: rem-calc(map-get($input-options, 'height'));
+
+              @if map-has-key($input-options, 'padding') {
+                padding: map-get($input-options, 'padding');
+              }
+
+
+            }
+          }
+        }
+
+      }
+    }
+  }
+  %select-style {
+    width: 100%;
+    border: $input-border-size solid $input-border-color;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    background-color: $input-bg-color;
+    @include radius($input-radius);
+    @include transitions(background-color 0.2s ease, border 0.2s ease);
+      select, span{
+        align-items: center;
+        color: $input-text-color;
+        width: 100%;
+        display: block;
+      }
+
+    &:hover {
+      background-color: $input-bg-color-hover;
+    }
+
+    &:focus {
+      position: relative;
+      outline: 0;
+      border-color: $input-color-focus;
+    }
+    &::before{
+      content: "";
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom:0;
+      margin: auto 1rem auto;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 20 20'><path d='M9.289,15.294a.992.992,0,0,0,1.422,0l8.956-8.955a1.131,1.131,0,1,0-1.6-1.6l-7.356,7.355a.992.992,0,0,1-1.422,0L1.933,4.761a1.131,1.131,0,0,0-1.6,1.6Z'/></svg>");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .select{
+      @extend %select-style;
+      @extend %select-height;
+  }
+
+}

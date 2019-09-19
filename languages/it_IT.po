@@ -1,0 +1,466 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: sc-evo\n"
+"POT-Creation-Date: 2019-09-18 12:30+0200\n"
+"PO-Revision-Date: 2019-09-18 12:57+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: esc_html;esc_html_e;__\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:10
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! Questa pagina non è stata trovata"
+
+#: 404.php:14
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Sembra che non sia stato trovato nulla in questa posizione. Magari prova uno "
+"dei link sottostanti o prova con una nuova ricerca?"
+
+#: 404.php:23
+msgid "Most Used Categories"
+msgstr "Categorie più utilizzate"
+
+#: footer.php:73
+msgid "Copyright"
+msgstr ""
+
+#: inc/CMZ/CMZ__footer.php:10
+msgid "Footer"
+msgstr ""
+
+#: inc/CMZ/CMZ__footer.php:11
+msgid "Inserisci il logo del Footer"
+msgstr ""
+
+#: inc/CMZ/CMZ__footer.php:22 inc/CMZ/CMZ__footer.php:35
+#: inc/CMZ/CMZ__footer.php:48 inc/CMZ/CMZ__footer.php:61
+#: inc/CMZ/CMZ__footer.php:73
+msgid "SECTION__footer"
+msgstr ""
+
+#: inc/CMZ/CMZ__footer.php:33
+msgid "Descrizione"
+msgstr ""
+
+#: inc/CMZ/CMZ__footer.php:46
+msgid "Facebook link"
+msgstr ""
+
+#: inc/CMZ/CMZ__footer.php:59
+msgid "Instagram link"
+msgstr ""
+
+#: inc/CMZ/CMZ__footer.php:71
+msgid "Pinterest link"
+msgstr ""
+
+#: inc/CMZ/CMZ__site-info.php:9
+msgid "Site Info"
+msgstr ""
+
+#: inc/CMZ/CMZ__site-info.php:10
+msgid "Personalizza il logo"
+msgstr ""
+
+#: inc/CMZ/CMZ__site-info.php:20
+msgid "Logo"
+msgstr ""
+
+#: inc/CMZ/CMZ__site-info.php:21 inc/CMZ/CMZ__site-info.php:33
+#: inc/CMZ/CMZ__site-info.php:45 inc/CMZ/CMZ__site-info.php:56
+#: inc/CMZ/CMZ__site-info.php:67 inc/CMZ/CMZ__site-info.php:78
+#: inc/CMZ/CMZ__site-info.php:89
+msgid "SECTION__site-info"
+msgstr ""
+
+#: inc/CMZ/CMZ__site-info.php:31
+msgid "testo alt del logo"
+msgstr ""
+
+#: inc/CMZ/CMZ__site-info.php:44
+msgid "Favicon 192x192"
+msgstr ""
+
+#: inc/CMZ/CMZ__site-info.php:55
+msgid "Favicon 76x76"
+msgstr ""
+
+#: inc/CMZ/CMZ__site-info.php:66
+msgid "Favicon 120x120"
+msgstr ""
+
+#: inc/CMZ/CMZ__site-info.php:77
+msgid "Favicon 152x152"
+msgstr ""
+
+#: inc/CMZ/CMZ__site-info.php:88
+msgid "Favicon 180x180"
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__banner.php:10
+msgid "APX - Banner"
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__banner.php:11
+msgid "Banner"
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__bannerbrand.php:10
+msgid "APX - Banner Brand"
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__bannerbrand.php:11
+msgid "Banner Brand"
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__bigalternate.php:10
+msgid "APX - Box Alt Big"
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__bigalternate.php:11
+msgid "Box alternato con immagine grande"
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__contact.php:12
+msgid "APX - Form Contact"
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__contact.php:13
+msgid "Box Form Contatti"
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__contactambassador.php:10
+msgid "APX - Contact Ambassador"
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__contactambassador.php:11
+msgid "Box Contact Ambassador"
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__hero01.php:12
+msgid "APX - Hero 01"
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__hero01.php:13
+msgid "Hero 01 con frame"
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__mediacontent.php:12
+msgid "APX - Multibox"
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__mediacontent.php:13
+msgid "A custom media content block."
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__smallalternate.php:12
+msgid "APX - Small alt"
+msgstr ""
+
+#: inc/Gutenberg/acf/Block__smallalternate.php:13
+msgid "Box alternato con immagine piccola"
+msgstr ""
+
+#: inc/Gutenberg/functions/Function-init.php:7
+msgid "Primary"
+msgstr ""
+
+#: inc/Gutenberg/functions/Function-init.php:12
+msgid "Black"
+msgstr ""
+
+#: inc/Gutenberg/functions/Function-init.php:17
+msgid "Gray dark"
+msgstr ""
+
+#: inc/Gutenberg/functions/Function-init.php:22
+msgid "Gray medium"
+msgstr ""
+
+#: inc/Gutenberg/functions/Function-init.php:27
+msgid "Gray light"
+msgstr ""
+
+#: inc/Gutenberg/functions/Function-init.php:32
+msgid "White"
+msgstr ""
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr "Installa i Plugin Richiesti"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr "Installa Plugins"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Installa Plugin: %s"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr "Aggiornamento Plugin: %s"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr "Qualcosa è andato storto con l’API del plug-in."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr "Torna ai Plugin Richiesti"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:393
+msgid "Return to the Dashboard"
+msgstr "Ritorna alla Dashboard"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:394
+#: inc/install-plugin/class-tgm-plugin-activation.php:3252
+msgid "Plugin activated successfully."
+msgstr "Plugin attivato correttamente."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:395
+msgid "The following plugin was activated successfully:"
+msgstr "Il seguente plugin è stato attivato correttamente:"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "Nessuna azione intrapresa. il Plugin %1$s era già attivo."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+"Plugin non attivato. Per questo tema è necessaria una versione superiore di"
+"% s. Si prega di aggiornare il plugin."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Tutti i plugin installati e attivati correttamente. %1$s"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr "Rimuovi questa notifica"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+"Esistono uno o più plugin richiesti o consigliati da installare, aggiornare "
+"o attivare."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr "Si prega di contattare l’amministratore di questo sito per assistenza."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2075
+#, php-format
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2366
+msgid "Required"
+msgstr "Richiesto"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2369
+msgid "Recommended"
+msgstr "Consigliato"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2385
+msgid "WordPress Repository"
+msgstr "WordPress Repository"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2388
+msgid "External Source"
+msgstr "Risorsa Esterna"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2391
+msgid "Pre-Packaged"
+msgstr "Preconfezionato"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2408
+msgid "Not Installed"
+msgstr "Non Installato"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2412
+msgid "Installed But Not Activated"
+msgstr "Installato ma non attivato"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2414
+msgid "Active"
+msgstr "Attivo"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2420
+msgid "Required Update not Available"
+msgstr "Aggiornamento richiesto non disponibile"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2423
+msgid "Requires Update"
+msgstr "Richiede l’aggiornamento"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2426
+msgid "Update recommended"
+msgstr "Aggiornamento raccomandato"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2583
+msgid "Installed version:"
+msgstr "Versione installata:"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2591
+msgid "Minimum required version:"
+msgstr "Versione minima richiesta:"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2603
+msgid "Available version:"
+msgstr "Versione disponibile:"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2640
+msgid "Plugin"
+msgstr "Plugin"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2641
+msgid "Source"
+msgstr ""
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2642
+msgid "Type"
+msgstr ""
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2646
+msgid "Version"
+msgstr ""
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2647
+msgid "Status"
+msgstr ""
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2696
+#, php-format
+msgid "Install %2$s"
+msgstr "Installa %2$s"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2701
+#, php-format
+msgid "Update %2$s"
+msgstr "Aggiornare %2$s"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2707
+#, php-format
+msgid "Activate %2$s"
+msgstr "Attivare %2$s"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2810
+msgid "Install"
+msgstr "Installare"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2816
+msgid "Update"
+msgstr "Aggiornare"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2819
+msgid "Activate"
+msgstr "Attivare"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2850
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+"Nessun plugin selezionato per l’installazione. Nessuna azione intrapresa."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+"Nessun plugin selezionato per l’aggiornamento. Nessuna azione intrapresa."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2893
+msgid "No plugins are available to be installed at this time."
+msgstr "Nessun plugin disponibile per l’installazione in questo momento."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be updated at this time."
+msgstr "Nessun plugin disponibile per l’aggiornamento in questo momento."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:3251
+msgid "Plugin activation failed."
+msgstr "Attivazione del plug-in non riuscita."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:3591
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Aggiornamento Plugin: %1$s (%2$d/%3$d)"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+"Si è verificato un errore durante l’installazione di %1$s: <strong>%2$s</"
+"strong>."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:3596
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "L’installazione di %1$s non è riuscita."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"Il processo di installazione e attivazione sta iniziando. Questo processo "
+"potrebbe richiedere del tempo su alcuni host, quindi ti preghiamo di "
+"pazientare."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s installato e attivato con successo."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:3603
+msgid "All installations and activations have been completed."
+msgstr "Tutte le installazioni e le attivazioni sono state completate."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Installazione e attivazione del plug-in %1$s (%2$d/%3$d)"
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:3608
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"Il processo di installazione sta iniziando. Questo processo potrebbe "
+"richiedere del tempo su alcuni host, quindi ti preghiamo di pazientare."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:3611
+msgid "All installations have been completed."
+msgstr "Tutte le installazioni sono state completate."
+
+#: inc/install-plugin/class-tgm-plugin-activation.php:3613
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Installa Plugin: %1$s (%2$d/%3$d)"
+
+#: inc/install-plugin/install-plugin.php:71
+msgid "I really, really need you to install these plugins, okay?"
+msgstr "È necessario che tu installi questi plugin, ok?"
+
+#: inc/install-plugin/install-plugin.php:73
+msgid "<!--Hey there.-->"
+msgstr ""

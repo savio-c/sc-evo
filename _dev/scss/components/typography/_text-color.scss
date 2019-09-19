@@ -1,0 +1,20 @@
+@mixin component__text-color {
+  @each $name-color, $hex in $color_and_gray {
+    .text-#{$name-color},
+    .text-#{$name-color} p{
+      color: color($name-color);
+
+      @each $class-name, $opacity in $color-opacity {
+        &.#{$class-name},
+        &.#{$class-name} p,
+        &.#{$class-name} ul {
+          color: color($name-color, $opacity);
+        }
+      }
+
+      a {
+        color: color($name-color);
+      }
+    }
+  }
+}

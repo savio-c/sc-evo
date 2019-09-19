@@ -1,0 +1,27 @@
+@mixin component__font-face{
+
+
+  @font-face {
+  font-family: $font-sans;
+  src: url('#{$font-path}#{$font-regular}.eot');
+  src: url('#{$font-path}#{$font-regular}.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}#{$font-regular}.woff2') format('woff2'),
+       url('#{$font-path}#{$font-regular}.woff') format('woff');
+  font-weight:  $weight-normal;
+  font-style: normal;
+  font-display:block;
+
+}
+
+  @font-face {
+  font-family: $font-sans;
+  src: url('#{$font-path}#{$font-bold}.eot');
+  src: url('#{$font-path}#{$font-bold}.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}#{$font-bold}.woff2') format('woff2'),
+       url('#{$font-path}#{$font-bold}.woff') format('woff');
+  font-weight:  $weight-bold;
+font-style: normal;
+font-display: block;
+}
+
+}

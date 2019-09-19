@@ -1,0 +1,11 @@
+@mixin transitions($argument...){
+  -webkit-transition: $argument;
+  -moz-transition: $argument;
+  transition: $argument;
+}
+
+@mixin transition-delay($argument...){
+  -webkit-transition-delay: $argument;
+  -moz-transition-delay: $argument;
+  transition-delay: $argument;
+}

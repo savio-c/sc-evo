@@ -1,0 +1,27 @@
+@mixin gradient($typegradient, $gradient-name){
+    $gradient  : map-get($gradient-map, $gradient-name);
+    $start     : nth($gradient,2);
+    $end       : nth($gradient,1);
+
+ background: $start ;
+
+  @if $typegradient=='horizontal' {
+  background: -webkit-linear-gradient( to right, $start , $end);
+  background: linear-gradient( to right, $start , $end);
+  }
+
+  @else if $typegradient=='vertical' {
+  background: -webkit-linear-gradient( to bottom, $start , $end);
+  background: linear-gradient( to bottom, $start , $end);
+  }
+
+  @else if $typegradient=='diagonal-top' {
+  background: -webkit-linear-gradient( to top left, $start , $end);
+  background: linear-gradient( to top left, $start , $end);
+  }
+
+  @else if $typegradient=='diagonal-bottom' {  background: $start ;
+  background: -webkit-linear-gradient( to bottom left, $start , $end);
+  background: linear-gradient( to bottom left, $start , $end);
+  }
+}

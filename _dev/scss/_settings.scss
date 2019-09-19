@@ -1,0 +1,498 @@
+
+
+/* Global
+   ========================================================================== */
+$font-size-root  : 16px;
+$base-fontfamily : -apple-system,
+                   BlinkMacSystemFont,
+                   Helvetica,
+                   Arial,
+                   sans-serif,
+                   'Apple Color Emoji',
+                   'Segoe UI Emoji',
+                   'Segoe UI Symbol';
+
+/* Fontfamily
+   ========================================================================== */
+$font-regular       : 'Graphik-Regular-Web';
+$font-bold          : 'Graphik-Medium-Web';
+$font-size-root     : 16px;
+$weight-normal      : 400;
+$weight-bold        : 500;
+$font-serif         : '';
+$font-sans          : 'Graphik';
+$body-font-family   : $font-sans, $base-fontfamily;
+$font-path          : '/wp-content/themes/sc-evo/assets/fonts/';
+
+/* Radius
+   ========================================================================== */
+
+
+/* Mediaquery
+   ========================================================================== */
+$breakpoints: (
+  small                  :  0,
+  medium                 :  640px,
+  large                  :  1024px,
+  x-large                :  1280px,
+  xx-large               :  1440px,
+);
+
+$layout-width            : map-get($breakpoints, xx-large);
+$container-width         : rem-calc(1024px);
+
+
+/* Grid
+   ========================================================================== */
+$grid-column             : 12;
+$grid-gap                : 30;
+$grid-gap-small          : 20;
+
+/* Color
+   ========================================================================== */
+$colors-list: (
+  primary                :  #212B35,
+  secondary              :  #FFFFFF,
+  warning                :  #FFC41C,
+  alert                  :  #DB040A,
+  success                :  #65AE84,
+  light                  :  #FFFFFF,
+);
+
+// Color hover
+$colors-list-hover: (
+  primary-hover          :  #483949,
+  secondary-hover        :  #C7B57E,
+  warning-hover          :  #EC9f0C,
+  alert-hover            :  #DB040A,
+  success-hover          :  #2F8A56,
+  light-hover            :  #FFFFFF,
+);
+
+// Gray
+$gray-list: (
+  black                  :  #212B35,
+  gray-dark              :  #50535B,//#637280,
+  gray-silver            :  #cacbcc,
+  gray-medium            :  #e9e9ea,
+  gray-light             :  #F4F4F4,
+  gray-ultra-light       :  #FDFDFD,
+  white                  :  #FFFFFF,
+);
+
+$color-opacity : (
+  'op1'                  : .3,
+  'op2'                  : .6,
+  'op3'                  : .9,
+);
+
+$gradient-map : (
+  gradient-primary       : #4373AA #6193C3,
+);
+
+//mappa di tutte le variabili del colore
+$body-bg-color           : map-get($gray-list, gray-ultra-light);
+$color_and_gray          :  map-merge(map-merge($colors-list, $gray-list), $colors-list-hover);
+$color_and_gray_no-hover :  map-merge($colors-list, $gray-list);
+$color-text              :  white;
+$color-text-alt          :  black;
+//valore della luminosità che determina il colore alternativo
+$range-color-alt         : 66.667;
+
+//layout
+$article-body_bg_color   : white;
+$layout-border-color     : map-get($gray-list, gray-medium);
+$layout-bg-color         : white;
+
+
+/* Headline
+   ========================================================================== */
+$header-styles: (
+  small: (
+    'h1' : ( 'font-size' : 31, 'line-height' : 85  ),
+    'h2' : ( 'font-size' : 26, 'line-height' : 32  ),
+    'h3' : ( 'font-size' : 22, 'line-height' : 30  ),
+    'h4' : ( 'font-size' : 24, 'line-height' : 28  ),
+    'h5' : ( 'font-size' : 21, 'line-height' : 28  ),
+    'h6' : ( 'font-size' : 18, 'line-height' : 25  ),
+  ),
+  medium: (
+    'h1' : ( 'font-size' : 77, 'line-height' : 85 ),
+    'h2' : ( 'font-size' : 50, 'line-height' : 56 ),
+    'h3' : ( 'font-size' : 42, 'line-height' : 48 ),
+    'h4' : ( 'font-size' : 34, 'line-height' : 40 ),
+    'h5' : ( 'font-size' : 28, 'line-height' : 32 ),
+    'h6' : ( 'font-size' : 22, 'line-height' : 30 ),
+  ),
+  large: (
+    'h1' : ( 'font-size' : 77, 'line-height' : 85 ),
+    'h2' : ( 'font-size' : 50, 'line-height' : 56 ),
+    'h3' : ( 'font-size' : 42, 'line-height' : 48 ),
+    'h4' : ( 'font-size' : 34, 'line-height' : 40 ),
+    'h5' : ( 'font-size' : 28, 'line-height' : 32 ),
+    'h6' : ( 'font-size' : 22, 'line-height' : 30 ),
+  ),
+);
+
+$content-title:(
+  small: ( 'padding' : 0 0 1.5rem),
+  medium: ( 'padding' : 0 5rem 2rem 5rem ),
+);
+
+
+// font weight headline
+$title-font-family   : $font-sans;
+$title-weight        : $weight-bold;
+$title-color         : color(black);
+$title-margin        : 1rem;
+//text
+$text-color          : color(gray-dark);
+$text-font-size      : (
+  'text-small'       : ( 'font-size' : 14 ),
+  'text-default'     : ( 'font-size' : 16 ),
+  'text-large'       : ( 'font-size' : 18 ),
+);
+
+$map-subtitle: (
+    small            : 18,
+    medium           : 20,
+    large            : 22,
+);
+$subtitle-color      : color(gray-dark);
+
+/* Title
+   ========================================================================== */
+$title__border       : 3px solid color(primary);
+
+/* Buttons
+   ========================================================================== */
+
+   $buttons-list: (
+     tiny: (
+       'font-size'   : 12,
+       'padding'     : 0 1rem,
+       'height'      : 28
+       ),
+     small: (
+       'font-size'   : 13,
+       'padding'     : 0 1.1rem,
+       'height'      : 36
+     ),
+     default: (
+       'font-size'   : 16,
+       'padding'     : 0 1.4rem,
+       'height'      : 44
+     ),
+     large: (
+       'font-size'   : 18,
+       'padding'     : 0 1.8rem,
+       'height'      : 54
+     ),
+   );
+
+ // button font-family
+$button-font-family    : $body-font-family;
+
+ // border radius del button
+$button-radius         : 4px !default;
+
+ // button transition effect
+$button-transition     : background-color .2s ease, color .2s ease;
+$button-text-transform : unset;
+$button-weight         : $weight-bold;
+
+  /* Button Hamburger
+     ========================================================================== */
+$button-hamburger-color : color(primary);
+
+/* Menu
+   ========================================================================== */
+$menu-font-family    : $font-sans;
+$menu-weight         : $weight-bold;
+$menu-font-size      : rem-calc(16);
+$menu-color          : color(black);
+$menu-text-transform : unset;
+
+/* Container
+   ========================================================================== */
+$container: (
+  small:(
+    'padding' : 2rem 2rem
+  ),
+  medium:(
+    'padding' : 3rem 2rem
+  ),
+  large:(
+    'padding' : 5rem 2rem
+  ),
+);
+
+$container-footer : (
+  small:(
+    'padding' : 1rem 0 0 0
+  ),
+  medium:(
+    'padding' : 3rem 0 0 0
+  ),
+);
+
+/* Content
+   ========================================================================== */
+$content-list: (
+  small:(
+    'padding' : 1rem
+  ),
+  medium:(
+    'padding' : 1.5rem
+  ),
+  large:(
+    'padding' : 2rem
+  ),
+);
+
+/* Icon
+   ========================================================================== */
+$icon-list : (
+  small  : 20,
+  medium : 24,
+  large  : 36,
+  xlarge : 48
+ );
+
+$cont-icon-color : color(primary);
+
+ /* Topbar
+    ========================================================================== */
+$topbar-bg-color          :  color(white);
+$topbar-padding           :  0 2rem;
+$topbar-item-padding      :  0;
+$topbar-a-padding         :  1rem .5rem;
+$topbar-item-number       :  15;
+$topbar-item-delay        :  .04;
+$topbar-item-border-color :  color(black, .1);
+$topbar-height            :  rem-calc(60);
+$topbar-logo-h            :  25;
+$topbar-logo-w            :  200;
+$topbar-a-color           :  color(black);
+$topbar-a-margin-mobile   :  2rem;
+$topbar-a-padding-mobile  :  1rem 2rem;
+$topbar-a-bg-color        :  color(white);
+$topbar-menu-fontsize     :  14;
+$topbar-nav-toggle-padding:  .8rem 1.25rem .8rem 0;
+$topbar-item-svg-color    :  '000000';
+$topbar-item-svg-opacity  :  0.5;
+$topbar-menu-svg-color    :  '000000';
+$topbar-shadow            : rgba(0, 12, 32, 0.04) 0px 0px 1px 0px, rgba(10, 31, 68, 0.04) 0px 16px 24px 0px;
+
+ /* Hero 01
+    ========================================================================== */
+
+$hero-01-size : (
+    small:(
+      'min-height' : 150,
+      'max-height' : 600,
+    ),
+    medium:(
+      'min-height' : 250,
+      'max-height' : 500,
+    ),
+);
+
+$hero-01-frame-mobile  : 10px solid color(black);
+$hero-01-frame         : 30px solid color(black);
+
+/* Card
+   ========================================================================== */
+
+$card__hr-color        : 2px solid color(primary);
+
+/* Forms
+   ========================================================================== */
+$input-type : (
+   'button',
+   'email',
+   'password',
+   'date',
+   'number',
+   'tel',
+   'text',
+   'datetime',
+   'url',
+   'time',
+   'datetime-local',
+);
+
+$input-list: (
+ tiny: (
+   'font-size': 12,
+   'padding': 0 .4rem,
+   'height': 28,
+   ),
+ small: (
+   'font-size': 13,
+   'padding': 0 .6rem,
+   'height': 36,
+ ),
+ default: (
+   'font-size': 14,
+   'padding': 0 .8rem,
+   'height': 44,
+ ),
+ large: (
+   'font-size': 16,
+   'padding': 0 1rem,
+   'height': 54,
+ ),
+);
+
+$input-radius            : 4px;
+$input-text-color        : color(gray-dark);
+$input-bg-color          : color(white);
+$input-bg-color-hover    : $input-bg-color;//darken($input-bg-color, 5%);
+$input-border-size       : 1px;
+$input-border-color      : color(gray-silver);
+$input-border-color-focus: color(gray-silver);
+$input-placeholder-color : color(gray-dark);
+$input-color-focus       : color(gray-dark);
+
+// cont icon
+$cont-icon-radius : 225px;
+$cont-icon-map: (
+ small: 50,
+ medium: 90,
+ large: 100,
+);
+
+ /* Cookie Banner
+    ========================================================================== */
+$cookie-banner-padding      :  1rem;
+$cookie-banner-bg-color     : color(black,.9);
+$cookie-banner-color        : color(white);
+
+ /* Categories label
+    ========================================================================== */
+
+$categories-text-transform : uppercase;
+$categories-letter-spacing : 2px;
+$categories-color          : color(gray-dark);
+$categories-line-w         : 1.6rem;
+$categories-line-h         : .4rem;
+$categories-line-color     : color(primary);
+$categories-line-radius    : 225px;
+
+$categories-prop : (
+  small : (
+    'margin'    : 1rem,
+    'font-size' : 12
+  ),
+  medium : (
+    'margin'    : 2rem,
+    'font-size' : 14
+  )
+);
+
+ /* Spacing
+    ========================================================================== */
+$spacing-max     :  3;
+$spacing-offset  :  1;
+$spacing-unit    :  'rem';
+
+ /* Box
+    ========================================================================== */
+$box-radius        :  8px;
+$box-shadow        :  0 1px 5px rgba(0,0,0,.1), 0 4px 20px rgba(0,0,0,.05);
+$box-shadow-hover  :  0 5px 20px rgba(0,0,0,.17);
+
+ /* Banner
+    ========================================================================== */
+$banner-list : (
+  small : (
+    'padding'    : 1rem
+  ),
+  medium : (
+    'padding'    : 2rem
+  )
+);
+
+ /* Banner Brand
+    ========================================================================== */
+$banner-brand-list : (
+  small : (
+    'padding'    : 1rem
+  ),
+  medium : (
+    'padding'    : 1rem
+  )
+);
+
+ /* Flex
+    ========================================================================== */
+$flex_map :(
+
+   align-h :(
+    'left'          : flex-start, // allineato a sinistra
+    'right'         : flex-end, // allineato a destra
+    'center'        : center, // allineato al centro
+    'justify'       : space-between, // allineato ai bordi
+    'spaced'        : space-around // distribuito nello spazio
+   ),
+
+   align-v :(
+    'top'           : flex-start, // allineato in alto
+    'bottom'        : flex-end, // allineato in basso
+    'middle'        : center, // allineato al centro
+    'stretch'       : stretch  // strecciato in verticale
+   ),
+
+   align-self :(
+    'self-top'      : flex-start, // allinea singolo figlio in alto
+    'self-bottom'   : flex-end, // allinea singolo figlio in basso
+    'self-middle'   : center, // allinea singolo figlio al centro
+    'self-stretch'  : stretch // strecciato singolo figlio in verticale
+   ),
+
+  direction :(
+   'row'            : row, // direzione da sinistra a destra
+   'row-reverse'    : row-reverse, // direzione inversa
+   'column'         : column, // direzione dall'alto verso il basso
+   'column-reverse' : column-reverse,  // direzione inversa
+  ),
+
+  flex-child :(
+   'child-auto'     : 1 1 auto, // automatico
+   'child-grow'     : 1 0 auto, // cresciuto
+   'child-shrink'   : 0 1 auto, //
+  ),
+
+  wrap :(
+   'wrap'           : wrap,
+   'nowrap'         : nowrap,
+   'wrap-reverse'   : wrap-reverse,
+  ),
+);
+ /* Flex Order
+    ========================================================================== */
+$order : 12;
+
+ /* Dropdown
+    ========================================================================== */
+$dropdown-width          : rem-calc(220px);
+$dropdown-bg-color       : color(white);
+$dropdown-border         : 1px solid color(gray-medium);
+$dropdown-shadow         : $box-shadow;
+$dropdown-padding        : 1rem;
+$dropdown-radius         : 4px;
+$dropdown-bg-color-hover : color(gray-light);
+
+ /* Footer site
+    ========================================================================== */
+$footer-bg-color               : color(black);
+$footer-menu-color             : color(white);
+$footer-description-color      : color(white, .6);
+$footer-description-fontsize   : rem-calc(14);
+$footer-description-lineheight : 1.8;
+$footer-copyright-fontsize     : rem-calc(14);
+$footer-copyright-padding      : 3rem 0;
+$footer-copyright-border       : 1px solid color(white,.1);
+$footer-copyright-color        : color(white,.4);
+$footer-logo-margin            : 1rem;

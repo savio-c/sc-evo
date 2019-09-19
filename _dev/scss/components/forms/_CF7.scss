@@ -1,0 +1,57 @@
+@mixin component__CF7 {
+  input, select{
+  &.wpcf7-not-valid {
+    background-color: color(alert,.2);
+    color: color(alert);
+    border-color: color(alert);
+  }
+  &.wpcf7-submit{
+    border:none;
+    &:disabled{
+      opacity:.5
+    }
+  }
+
+}
+
+.screen-reader-response{
+  display: none;
+}
+
+
+.wpcf7-display-none{
+  display: none;
+}
+  .wpcf7-not-valid-tip {
+    display: none!important;
+  }
+
+  .wpcf7-response-output {
+    margin-bottom: 2rem;
+    border: 1px solid transparent;
+    padding: 2rem;
+    @include radius(5px);
+    text-align:center;
+    font-size: rem-calc(18);
+    font-weight: $weight-bold;
+
+    &.wpcf7-validation-errors {
+      border-color: color(alert);
+      color:color(alert);
+      background-color: color(alert, .2)
+    }
+    &.wpcf7-mail-sent-ok{
+      border-color: color(success);
+      color:color(success);
+      background-color: color(success, .2)
+    }
+  }
+
+
+.wpcf7-form{
+  .form-message-box{
+    text-align: center;
+    @extend .text-small;
+  }
+}
+}

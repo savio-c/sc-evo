@@ -1,0 +1,37 @@
+{
+  "name": "Business Archiproducts",
+  "short_name": "Business Archiproducts",
+  "description": "xxxxxxxxxxxx xxxxxxxx xxxxxx",
+  "lang": "it",
+  "start_url": "/?utm_source=homescreen",
+  "display": "browser",
+  "theme_color": "#fff14b",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "https://business.archiproducts.com/wp-content/uploads/2019/05/business-archiproducts-favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://business.archiproducts.com/wp-content/uploads/2019/05/business-archiproducts-favicon_180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "https://business.archiproducts.com/wp-content/uploads/2019/05/business-archiproducts-favicon_152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "https://business.archiproducts.com/wp-content/uploads/2019/05/business-archiproducts-favicon_120.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "https://business.archiproducts.com/wp-content/uploads/2019/05/business-archiproducts-favicon_76.png",
+      "sizes": "76x76",
+      "type": "image/png"
+    }
+  ]
+}

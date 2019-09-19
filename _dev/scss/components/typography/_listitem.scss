@@ -1,0 +1,16 @@
+@mixin component__listitem {
+  .listitem {
+    ul {
+      list-style: disc;
+      margin-left: 2rem;
+      margin-bottom: 2rem;
+
+      li {
+        margin-bottom: 0.2rem;
+        color: color(gray-dark);
+        padding-left: 0.5rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}

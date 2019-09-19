@@ -1,0 +1,32 @@
+@mixin component__infobar {
+  .infobar {
+    display: flex;
+
+    @include mediaquery(medium){
+
+    }
+    @include mediaquery(x-large){
+
+    }
+    .infobar__wrapper {
+
+      display: none;
+      @include mediaquery(large) {
+        width: $layout-width;
+        padding: 0;
+        display: flex;
+        margin: auto;
+      }
+    }
+
+    .infobar__left {
+      flex: 1 1 auto;
+      margin-right: auto;
+    }
+
+    .infobar__right {
+      flex: 0 1 auto;
+      margin-left: auto;
+    }
+  }
+}

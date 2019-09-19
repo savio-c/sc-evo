@@ -1,0 +1,98 @@
+@import '../scss/functions/functions';
+@import '../scss/settings';
+
+@import '../scss/utility/mediaquery';
+@import '../scss/utility/typography';
+@import '../scss/utility/visibility';
+@import '../scss/utility/flex';
+@import '../scss/utility/flex-order';
+@import '../scss/utility/sizing';
+
+
+@import '../scss/mixins/mixin';
+
+@import '../scss/components/fonts/fonts';
+@import '../scss/components/layout/layout';
+@import '../scss/components/header/header';
+@import '../scss/components/buttons/button';
+@import '../scss/components/cookies/cookie-banner';
+@import '../scss/components/menu/menu';
+@import '../scss/components/typography/typography';
+@import '../scss/components/cont/cont';
+@import '../scss/components/mediaobject/media-object';
+@import '../scss/components/level/level';
+@import '../scss/components/gallery/hero-gallery';
+@import '../scss/components/icons/icons';
+@import '../scss/components/card/card';
+@import '../scss/components/forms/forms';
+@import '../scss/components/progress/progress';
+@import '../scss/components/spacing/spacing';
+@import '../scss/components/effect/animate-scroll';
+@import '../scss/components/box/box';
+@import '../scss/components/banner/banner';
+
+
+.edit-post-layout__content{ //body editor
+  background-color: $body-bg-color;
+  a{
+    pointer-events: none !important;
+    cursor: default;
+  }
+}
+.lazyblock {
+  box-shadow: none!important;
+  padding: 0!important;
+
+  .lzb-content-title {
+    display: none !important;
+  }
+}
+.wp-block {
+    max-width: 1440px;
+}
+.editor-styles-wrapper{
+  font-family: inherit!important;
+}
+  @include component__font-face;
+.editor-block-list__layout{
+
+  @import 'normalize';
+
+  //@include component__topbar;
+  //@include component__infobar;
+  @include component__button;
+  @include component__button-cyrcle;
+  //@include component__button-hamburger;
+  @include component__cookie-banner;
+  @include component__menu-nav;
+  @include component__overlay;
+  @include component__hero-01;
+  @include component__title;
+  @include component__subtitle;
+  @include component__padding;
+  @include component__margin;
+  @include component__categories;
+  @include component__text;
+  @include component__text-color;
+  @include component__container;
+  @include component__content;
+  @include component__content-title;
+  @include component__mediaobject;
+  @include component__level;
+  @include component__hero-gallery;
+  @include component__icons;
+  @include component__card;
+  @include component__form-text;
+  @include component__form-select;
+  //@include component__progress;
+  @include component__listitem;
+  @include component__padding;
+  //@include component__animate-scroll;
+  @include component__CF7;
+  @include component__content-icon;
+  @include component__banner-center;
+  @include component__banner-brand;
+}
+
+@include component__box-alternate;
+@include component__box;

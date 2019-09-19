@@ -1,0 +1,18 @@
+
+
+@mixin component__content-icon {
+  .cont-icon {
+      @include radius($cont-icon-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      background-color: color(white,.2);
+    @each $size-class, $size-value in $cont-icon-map {
+      &.is-#{$size-class}{
+        width: rem-calc($size-value);
+        height: rem-calc($size-value);
+      }
+    }
+  }
+}

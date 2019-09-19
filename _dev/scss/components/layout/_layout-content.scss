@@ -1,0 +1,8 @@
+.ly__main-content {
+  max-width: $layout-width;
+  margin: auto;
+  position: relative;
+  border-left: 1px solid $layout-border-color;
+  border-right: 1px solid $layout-border-color;
+  background-color: $layout-bg-color;
+}

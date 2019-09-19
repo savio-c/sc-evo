@@ -1,0 +1,10 @@
+@mixin component__content {
+  .content-subtitle {
+    text-align: left;
+    padding: 0 1rem;
+    @include mediaquery(large) {
+      text-align: center;
+      padding: 1rem 5rem;
+    }
+  }
+}

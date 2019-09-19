@@ -1,0 +1,38 @@
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1024px,
+  x-large: 1200px,
+  xx-large: 1440px,
+)!default;
+
+@mixin mediaquery($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media print, screen and (min-width:strip-unit($breakpoint-value)/strip-unit($font-size-root)+rem) {
+      @content;
+    }
+  }
+  @else
+  {
+    @error 'La variabile #{$breakpoint} è inesistente nella lista delle mediaquery $breakpoints-map.';
+  }
+}
+
+// SHOW for : small - medium - large - x-large - xx-large
+@each $a, $b in $breakpoints{
+  .show-for-#{$a}{
+     @media screen and (max-width: $b){
+          display: none !important;
+    }
+  }
+}
+
+// HIDE for : small - medium - large - x-large - xx-large
+@each $a, $b in $breakpoints{
+  .hide-for-#{$a}{
+     @media screen and (min-width: $b){
+          display: none !important;
+    }
+  }
+}

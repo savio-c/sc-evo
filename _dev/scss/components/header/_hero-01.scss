@@ -1,0 +1,47 @@
+@mixin component__hero-01 {
+  .hero_01 {
+    position: relative;
+
+    &.bg-image-cover {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    &.bg-pattern {
+      background-repeat: repeat;
+      background-position: top left;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .frame {
+      width: 100%;
+      border: $hero-01-frame-mobile;
+      border-bottom: none;
+      border-radius: 20px 20px 0 0;
+      @include print-map($hero-01-size);
+      overflow: hidden;
+
+      video {
+        width: 100%;
+      }
+      @include mediaquery(medium) {        
+        border: $hero-01-frame;
+        border-bottom: none;
+        border-radius: 30px 30px 0 0;
+      }
+    }
+
+    .container-inner {
+      padding-bottom: 0!important;
+      position: relative;
+    }
+  }
+}

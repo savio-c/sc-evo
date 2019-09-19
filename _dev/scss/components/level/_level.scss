@@ -1,0 +1,11 @@
+@mixin component__level {
+  .level {
+    display: none;
+    @include mediaquery(large) {
+      display: block;
+      padding: 2rem;
+      max-width: $layout-width;
+      margin: auto;
+    }
+  }
+}

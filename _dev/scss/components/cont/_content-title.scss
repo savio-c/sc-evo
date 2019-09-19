@@ -1,0 +1,5 @@
+@mixin component__content-title {
+  .content__title {
+    @include print-map($content-title);
+  }
+}

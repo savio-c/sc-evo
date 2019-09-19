@@ -1,0 +1,20 @@
+@mixin component__box {
+  .box {
+    display: block;
+    position: relative;
+    height: 100%;
+    @each $color-name, $hex in $color_and_gray {
+      &.is-#{$color-name} {
+        background-color: color( $color-name );
+        
+      }
+    }
+
+    @include radius( $box-radius );
+    @include box-shadow( $box-shadow );
+    @include transitions( box-shadow .3s ease-in-out );
+    &:hover{
+      @include box-shadow( $box-shadow-hover );
+    }
+  }
+}

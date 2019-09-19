@@ -1,0 +1,44 @@
+@mixin component__text {
+
+  %text-style {
+    color          :  $text-color;
+    line-height    :  1.6;
+    margin-top     :  0;
+    margin-bottom  :  1.5rem;
+
+    a {
+      color            : darken($text-color, 10%);
+      text-decoration  :  underline;
+      cursor           :  pointer;
+    }
+  }
+  // stile unico @extend, per le classi text-, rimuovo 'text-default'
+  @each $class, $value in map-remove($text-font-size, 'text-default') {
+    .#{$class}, p, ul {
+      @extend %text-style;
+    }
+
+  }
+  ul{
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+    // font-size per le classi test, rimuovo la class text-default e la sostituisco con p
+  @each $class, $value in $text-font-size {
+    $font-size   :  map-get($value, 'font-size');
+
+    @if $class == 'text-default' {
+      p,
+      ul {
+        font-size  :   rem-calc($font-size);
+      }
+    } @else {
+      .#{$class},
+      .#{$class} p,
+      .#{$class} ul{
+        font-size  :   rem-calc($font-size);
+      }
+    }
+  }
+}

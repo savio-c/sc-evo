@@ -1,0 +1,48 @@
+@mixin component__progress {
+  .progress {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    display: block;
+    height: 1rem;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    height: rem-calc(25);
+    margin-bottom: 0.8rem;
+    background-color: transparent;
+    position: relative;
+
+    &::before {
+      content: attr(value)"%";
+      font-size: 0.8em;
+      position: absolute;
+      display: block;
+      margin: auto;
+      color: color(white);
+      font-weight: $weight-bold;
+      left: 0.5rem;
+      right: auto;
+      bottom: 0;
+      top: 0;
+      margin-bottom: auto;
+      margin-top: auto;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      z-index: 1;
+    }
+
+    &::-moz-progress-bar {
+      background-color: color(white, .5);
+    }
+
+    &::-webkit-progress-bar {
+      background-color: transparent;
+    }
+
+    &::-webkit-progress-value {
+      background-color: color(white, .5);
+    }
+  }
+}

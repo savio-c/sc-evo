@@ -1,0 +1,43 @@
+.flex-container {
+  display: flex;
+}
+@each $a, $b in $flex_map {
+  //align
+  @each $prop, $value in $b {
+    .align-#{$prop} {
+      @if $a == align-h {
+        justify-content: $value;
+      }
+      @if $a == align-v {
+        align-items: $value;
+      }
+      @if $a == align-self {
+        align-self: $value;
+      }
+    }
+  }
+  //direction
+  @each $prop, $value in $b {
+    .flex-dir-#{$prop} {
+      @if $a == direction {
+        flex-direction: $value;
+      }
+    }
+  }
+  //flex child
+  @each $prop, $value in $b {
+    .flex-#{$prop} {
+      @if $a == flex-child {
+        flex: $value;
+      }
+    }
+  }
+  //flex wrap
+  @each $prop, $value in $b {
+    .flex-#{$prop} {
+      @if $a == wrap {
+        flex-wrap:$value;
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@mixin component__hero-gallery {
+  .hero-gallery {
+    @include component__parallax;
+    @include mediaquery(medium) {}
+    @include mediaquery(x-large) {}
+
+    .hero-gallery__wrapper {
+      position: relative;
+      @include mediaquery(large) {
+        margin: auto;
+        max-width: $layout-width;
+      }
+    }
+
+    .hero-img {
+      @include mediaquery(x-large) {
+        display: none;
+      }
+    }
+
+    .hero-heading {
+      position: relative;
+
+      // &::after {
+      //   content: "";
+      //   display: block;
+      //   position: absolute;
+      //   background-color: color(black,.5);
+      //   top: 0;
+      //   left: 0;
+      //   right: 0;
+      //   bottom: 0;
+      // }
+      @include mediaquery(large) {
+        &::after {
+          content: none;
+        }
+      }
+
+      .hero-text__wrapper {
+        height: 100%;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        align-items: center;
+        z-index: 10;
+      }
+
+      .hero-text__content {
+        margin-top: -15rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        text-align: center;
+        @include mediaquery(large) {
+            text-align: left;
+        }
+        @include mediaquery(x-large) {
+          margin-top: inherit;
+          margin-right: 50%;
+          margin-left: 5rem;
+
+        }
+
+        .subtitle {
+          display: none;
+          @include mediaquery(x-large) {
+            display: block;
+          }
+        }
+
+        .title {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+@mixin component__parallax {
+  .parallax {
+    display: none;
+    @include mediaquery(x-large) {
+      position: relative;
+      display: block;
+      height: 703px;
+      overflow: hidden;
+      background-color: color(gray-light);
+
+      #plx-01 {
+        position: absolute;
+        bottom: -40px;
+        right: -20px;
+        z-index: 1;
+      }
+
+      #plx-02 {
+        position: absolute;
+        top: -20px;
+        right: -600px;
+        z-index: 0;
+      }
+
+      #plx-03 {
+        position: absolute;
+        bottom: 0;
+        right: -40px;
+        width: 57%;
+        z-index: 2;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@mixin component__mediaobject {
+  .media {
+    display: flex;
+
+    &.is-y {
+      flex-direction: column;
+    }
+
+    &.is-y__large {
+      @include mediaquery(large) {
+        flex-direction: column;
+      }
+    }
+
+    .media__left {
+      flex: 0 0 auto;
+      margin-right: 1rem;
+      @at-root [class*="is-y"]#{&} {
+        margin-bottom: 1rem;
+        margin-right: 0;
+      }
+
+      &.is-middle {
+        align-self: center;
+      }
+      &.is-bottom {
+        align-self: flex-end;
+      }
+    }
+
+    .media__right {
+      flex: 0 0 auto;
+      order:2;
+
+        &.is-middle {
+          align-self: center;
+        }
+        &.is-bottom {
+          align-self: flex-end;
+        }
+    }
+
+    .media__content {
+      flex: 1 1 auto;
+      text-align: left;
+      @at-root .is-y__large#{&} {
+        @include mediaquery(large) {
+          text-align: center;
+        }
+      }
+
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

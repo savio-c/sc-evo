@@ -1,0 +1,100 @@
+.ly__grid-block {
+  display: grid;
+  grid-column-gap: rem-calc($grid-gap);
+  grid-row-gap: rem-calc($grid-gap);
+
+  &.no-gap {
+    grid-column-gap: rem-calc(0);
+    grid-row-gap: rem-calc(0);
+  }
+  &.no-row-gap {
+    grid-row-gap: rem-calc(0);
+  }
+  &.no-column-gap {    
+    grid-column-gap: rem-calc(0);
+  }
+  @each $size, $value in $breakpoints {
+    @for $i from 1 through $grid-column {
+      @include mediaquery($size) {
+        @if $size == small {
+          &.is-block-#{$i} {
+            grid-template-columns: repeat($i, 1fr);
+          }
+        } @else
+        if $size != small {
+          &.is-block-#{$i}__#{$size} {
+            grid-template-columns: repeat($i, 1fr);
+          }
+        }
+      }
+    }
+  }
+}
+
+.ly__grid {
+  display: grid;
+  grid-template-columns: repeat($grid-column, 1fr);
+  grid-column-gap: rem-calc($grid-gap);
+  grid-row-gap: rem-calc($grid-gap);
+
+  &.is-gap-small {
+      grid-column-gap: rem-calc($grid-gap-small);
+      grid-row-gap: rem-calc($grid-gap-small);
+  }
+
+  &.is-middle {
+    align-items: center;
+  }
+
+  &.is-collapse {
+    grid-column-gap: rem-calc(0);
+    grid-row-gap: rem-calc(0);
+  }
+
+  &.is-collapse__y {
+    grid-row-gap: rem-calc(0);
+  }
+
+  &.is-collapse__x {
+    grid-column-gap: rem-calc(0);
+  }
+  @each $size, $value in $breakpoints {
+    @for $i from 1 through $grid-column {
+      @include mediaquery($size) {
+        @if $size == small {
+          .is-#{$i} {
+            grid-column: span $i/span $i;
+          }
+        } @else
+        if $size != small {
+          .is-#{$i}__#{$size} {
+            grid-column: span $i/span $i;
+            order: 1;
+          }
+        }
+      }
+    }
+  }
+  @each $size, $value in $breakpoints {
+    @for $i from 1 through $grid-column {
+      @include mediaquery($size) {
+        @if $size == small {
+          .is-offset-#{$i} {
+            grid-column-start: $i+1;
+          }
+        } @else
+        if $size != small {
+          .is-offset-#{$i}__#{$size} {
+            grid-column-start: $i+1;
+          }
+        }
+      }
+    }
+  }
+  $num: 4;
+  @for $i from 1 through $num {
+    .order-#{$i} {
+      order: $i;
+    }
+  }
+}

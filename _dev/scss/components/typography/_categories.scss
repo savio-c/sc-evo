@@ -1,0 +1,31 @@
+@mixin component__categories {
+  .categories {
+    display        : inline-flex;
+    align-items    : center;
+    text-transform : $categories-text-transform;
+    letter-spacing : $categories-letter-spacing;
+    color          : $categories-color;
+
+    @each $breakpoint, $value in $categories-prop {
+      @include mediaquery($breakpoint) {
+        $font-size    : map-get($value, 'font-size');
+        $margin       : map-get($value, 'margin');
+        font-size     : rem-calc($font-size);
+        margin-bottom : $margin;
+      }
+    }
+
+    &::before {
+      content      : "";
+      width        : $categories-line-w;
+      height       : $categories-line-h;
+      background   : $categories-line-color;
+      display      : block;
+      margin-right : 1rem;
+      @include radius($categories-line-radius);
+    }
+    &.white{
+      color: color(white, .8);
+    }
+  }
+}

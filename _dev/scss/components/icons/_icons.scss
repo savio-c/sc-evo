@@ -1,0 +1,43 @@
+@mixin component__icons {
+  svg[class*='icon'] {
+    fill: #000000;
+    display: inline-flex;
+    stroke-width: 1px;
+    stroke: inherit;
+    fill: inherit;
+  }
+
+  .icon {
+    @each $size-class, $size in $icon-list {
+      &.is-#{$size-class} {
+        width: rem-calc($size);
+        height: rem-calc($size);
+      }
+    }
+    @each $color-name, $rgb in $color_and_gray_no-hover {
+      &.is-#{$color-name} {
+        fill: $rgb;
+      }
+    }
+  }
+
+  .cont-icon {
+    padding: 0.5rem;
+    @each $color-name, $rgb in $colors-list {
+      &.is-#{$color-name} {
+        background-color: $rgb;
+
+        svg {
+          fill: color-alt($rgb);
+        }
+      }
+    }
+@each $class-name, $opacity in $color-opacity {
+    &.#{$class-name} {
+        svg {
+          opacity: $opacity;
+        }
+      }
+    }
+  }
+}

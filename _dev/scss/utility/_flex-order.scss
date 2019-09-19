@@ -1,0 +1,14 @@
+
+
+@for $i from 1 through $order{
+  .order-#{$i}{
+    order:$i;
+  }
+  @each $a, $b in map-remove($breakpoints, small){
+      @media screen and (#{$a}){
+         .order__#{$a}-#{$i}{
+         order:$i
+         }
+      }
+    }
+}

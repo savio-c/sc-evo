@@ -1,0 +1,199 @@
+@mixin component__topbar {
+  .topbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: block;
+    background-color: $topbar-bg-color;
+    padding: $topbar-padding;
+    z-index: 999;
+    @include box-shadow($topbar-shadow);
+    @include mediaquery(large) {
+      position: relative;
+
+      &.fixed {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+      }
+    }
+
+    .menu {
+      display: block;
+      @include mediaquery(large) {
+        //display: flex;
+        text-align: right;
+      }
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      max-width: $layout-width;
+      margin: auto;
+      height: $topbar-height;
+    }
+
+    ul {
+      flex: 0 1 100%;
+      list-style: none;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      //overflow: hidden;
+      @include mediaquery(large) {
+        opacity: 1;
+        max-height: unset;
+      }
+
+      &.active {
+        overflow: visible;
+        opacity: 1;
+        @include transitions(opacity 0.05);
+
+        li {
+          opacity: 1;
+          @include transform(translate(0, 0) scale(1));
+          @for $i from 1 through $topbar-item-number {
+            &:nth-child(#{$i}) {
+              z-index: ($topbar-item-number + 1) - $i;
+              @include transition-delay($topbar-item-delay*$i+s);
+            }
+          }
+          @include mediaquery(large) {
+            align-items: center;
+            display: inline-flex;
+          }
+        }
+      }
+      @include mediaquery(large) {
+        flex: 1 1 0;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+          padding: $topbar-item-padding;
+          display: inline-block;
+
+          a {
+            padding: $topbar-a-padding;
+            display: inline-block;
+            width: auto;
+            margin-left: 0;
+          }
+        }
+      }
+
+      a:not(.active) {
+        &::before {
+          content: '';
+          display: inline-block;
+          width: rem-calc(6px);
+          height: rem-calc(10px);
+          position: absolute;
+          right: 2rem;
+          top: 50%;
+          @include transform(translateY(-50%));
+          background-size: cover;
+          opacity: $topbar-item-svg-opacity;
+          background-image: url("data:image/svg+xml;utf8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'8'%20height%3D'13'%20viewBox%3D'0%200%208%2013'><path%20fill%3D'%23#{$topbar-item-svg-color}'%20fill-rule%3D'evenodd'%20d%3D'M0%201.5L1.5%200l5.792%205.792c.39.39.394%201.022%200%201.416L1.5%2013%200%2011.5l4.294-4.294c.39-.39.393-1.02%200-1.412L0%201.5z'%2F><%2Fsvg>");
+        }
+        @include mediaquery(large) {
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      > li {
+        opacity: 0;
+        @include transform(translate(0, -10px) scale(1.07));
+        @include transitions(opacity 0.25s, transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), scale 0.2s cubic-bezier(0.165, 0.84, 0.44, 1));
+        margin-bottom: -1px;
+        position: relative;
+
+        &:not(:last-child) {
+          //padding: 0;
+          border-bottom: 1px solid $topbar-item-border-color;
+          @include mediaquery(large) {
+            border-bottom: none;
+          }
+        }
+        @include mediaquery(large) {
+          opacity: 1;
+          @include transform(translate(0, 0) scale(1));
+        }
+      }
+
+      a {
+        $margin-menumobile: $topbar-a-margin-mobile * 2;
+        display: block;
+        width: calc(100% + #{$margin-menumobile});
+        margin-left: -$topbar-a-margin-mobile;
+        padding: $topbar-a-padding-mobile;
+        position: relative;
+        color: $topbar-a-color;
+        font-size: rem-calc($topbar-menu-fontsize);
+        text-transform: none;
+        //background-color: $topbar-a-bg-color;
+      }
+    }
+
+    .nav-toggle {
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      user-select: none;
+      padding: $topbar-nav-toggle-padding;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: 50%;
+        margin-top: -0.5rem;
+        right: 0;
+        background-image: url("data:image/svg+xml;utf8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2016%2016'><g%20fill%3D'none'%20fill-rule%3D'evenodd'><rect%20width%3D'16'%20height%3D'16'%20fill%3D'none'%2F><path%20fill%3D'%23#{$topbar-menu-svg-color}'%20fill-opacity%3D'1'%20fill-rule%3D'nonzero'%20d%3D'M4.707%205.293c-.39-.39-1.024-.39-1.414%200-.39.39-.39%201.024%200%201.414l4%204c.39.39%201.024.39%201.414%200l4-4c.39-.39.39-1.024%200-1.414-.39-.39-1.024-.39-1.414%200L8%208.586%204.707%205.293z'%2F><%2Fg><%2Fsvg>");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      &.active {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+      @include mediaquery(large) {
+        display: none;
+      }
+    }
+
+    .logo {
+      display: inline-block;
+      height: rem-calc($topbar-logo-h);
+      @include mediaquery(large) {
+        flex: 1 0 0;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      [role='banner'] {
+        display: block;
+        height: rem-calc($topbar-logo-h);
+        max-width: rem-calc($topbar-logo-w);
+      }
+    }
+  }
+}

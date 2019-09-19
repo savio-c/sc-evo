@@ -1,0 +1,30 @@
+
+@mixin spacing-loop($className, $styleName) {
+  @each $a, $b in map-get($breakpoints, small) {
+    $i: 0;
+    @while $i <= $spacing-max {
+      #{$className + $i} {
+        #{$styleName}: #{$i + $spacing-unit};
+      }
+      $i: $i + $spacing-offset;
+    }
+  }
+  @each $a, $b in map-remove($breakpoints, small) {
+    @include mediaquery($a) {
+      $i: 0;
+      @while $i <= $spacing-max {
+        #{$className + $i}__#{$a} {
+          #{$styleName}: #{$i + $spacing-unit};
+        }
+        $i: $i + $spacing-offset;
+      }
+    }
+  }
+}
+@mixin component__padding {
+  @include spacing-loop('.p-', 'padding');
+  @include spacing-loop('.pt-', 'padding-top');
+  @include spacing-loop('.pr-', 'padding-right');
+  @include spacing-loop('.pb-', 'padding-bottom');
+  @include spacing-loop('.pl-', 'padding-left');
+}

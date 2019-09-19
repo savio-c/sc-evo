@@ -1,0 +1,13 @@
+@mixin component__button-cyrcle {
+  .is-cyrcle{
+    padding: 0;
+    @include radius(50%);
+    @each $button-name, $button-options in map-remove($buttons-list, default) {
+          @if map-has-key($button-options, 'height') {
+            height: rem-calc(map-get($button-options, 'height'));
+            width: rem-calc(map-get($button-options, 'height'));
+          }
+        }
+
+    }
+  }

@@ -1,0 +1,94 @@
+@mixin component__container {
+  .site__container {
+    overflow: hidden;
+    width: 100%;
+    background-color: $body-bg-color;
+    padding-top: $topbar-height;
+    @include mediaquery(large) {
+      padding-top: 0;
+    }
+  }
+
+  .container {
+    position: relative;
+
+    &.is-full {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &.is-full-fluid {
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+
+    &.is-oblique {
+      &::after,
+      &::before {
+        content: "";
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%, auto!important;
+        height: 54px;
+        display: block;
+        @include mediaquery(large) {
+          height: 160px;
+        }
+      }
+
+      &::before {
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 10 10'> <path d='M0 0 L0 10 L10 10' fill='%23fff' /></svg>");
+        @include transform(rotate(180deg));
+      }
+
+      &::after {
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 10 10'> <path d='M0 0 L0 10 L10 10' fill='%23fff'/></svg>");
+      }
+    }
+
+    .container-inner {
+      max-width: $container-width;
+      margin: auto;
+      @each $color-name, $hex in $colors-list {
+        &.is-#{$color-name} {
+          background-color: color($color-name);
+        }
+      }
+      @include mediaquery(medium) {
+        flex: 1 0 0;
+      }
+    }
+    @each $color-name, $hex in $color_and_gray_no-hover {
+      &.is-#{$color-name} {
+        background-color: color($color-name);
+      }
+    }
+    @each $gradient-name, $hex in $gradient-map {
+      &.is-#{$gradient-name} {
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 100vw;
+          height: 100%;
+          top: 0;
+          @include gradient(diagonal-bottom, $gradient-name);
+        }
+      }
+    }
+    @each $size, $properties in $container {
+      .container-inner {
+        @include mediaquery($size) {
+          padding: map-get($properties, padding);
+        }
+      }
+      // &.is-#{$size} {
+    }
+
+    .container-footer {
+      @include print-map($container-footer);
+
+    }
+  }
+}

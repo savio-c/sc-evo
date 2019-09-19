@@ -1,0 +1,39 @@
+
+/**
+ * Remove the inheritance of text transform in Edge and Firefox.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+	/* 1 */
+	text-transform: none;
+	border-style: none;
+	background-color: transparent;
+	outline: none;
+}
+
+
+ol,
+ul {
+	//padding: 0;
+ //margin: 0;
+//list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+  vertical-align: middle;
+}
+figure, figcaption, section, aside, article{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0
+}

@@ -1,0 +1,48 @@
+@mixin print-map($map) {
+  $remove: small;
+  @if has-map-key($map, $remove) {
+    @each $a, $b in $map {
+      @if $a == $remove {
+
+          @each $c, $d in $b {
+            @if type-of($d) == 'number' and index('', unit($d)) != null{
+              #{$c}: rem-calc($d);
+            }
+           @else {
+              #{$c}: $d;
+           }
+          }
+
+      }
+    }
+    @each $a, $b in map-remove($map, $remove) {
+
+        @include mediaquery($a) {
+          @each $c, $d in $b {
+            @if type-of($d) == 'number' and index('', unit($d)) != null{
+              #{$c}: rem-calc($d);
+            }
+           @else {
+              #{$c}: $d;
+           }
+          }
+        }
+
+    }
+  }
+}
+
+// utilizzo : @include print-map($mappa);
+
+/* esempio di mappa utilizzata
+$mappa: (
+  small: (
+      "padding": 10rem,
+      "margin": 5rem,
+      "color": 5rem),
+  medium: (
+      "padding": 10rem,
+      "margin": 5rem
+  )
+);
+*/

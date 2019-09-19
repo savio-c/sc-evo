@@ -1,0 +1,66 @@
+@mixin component__banner-brand {
+  .banner-brand {
+    .banner-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .banner-inner {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .banner-logo {
+      width: calc(100% / 3);
+      @include mediaquery(large) {
+        width: calc(100% / 8);
+      }
+
+      @each $size, $properties in $banner-brand-list {
+        @include mediaquery($size) {
+          padding: map-get($properties, padding);
+        }
+      }
+
+      img {
+        display: block;
+        max-height: 80px;
+        margin: auto;
+      }
+    }
+
+    .image {
+      position: relative;
+      z-index: 0;
+    }
+
+    &.scroll-x {
+      position: relative;
+      @include transform(translate3d(0, 0, 0));
+
+      .banner-wrapper {
+        padding-bottom: 10%;
+      }
+
+      .banner-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: translate3d(0, 0, 0);
+        animation: moveSlideshow 12s linear infinite;
+
+        .banner-logo {
+          flex: 1 0 auto;
+        }
+      }
+    }
+  }
+}
+@keyframes moveSlideshow {
+  100% {
+    transform: translateX(-100%);
+  }
+}

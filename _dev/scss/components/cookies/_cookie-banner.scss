@@ -1,0 +1,40 @@
+@mixin component__cookie-banner {
+  .cookie-banner {
+    padding: $cookie-banner-padding;
+    text-align: center;
+    background-color: $cookie-banner-bg-color;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .cookie-banner-content{
+        color: $cookie-banner-color;
+        a{
+          color: $cookie-banner-color;
+          text-decoration: underline;
+        }
+    }
+
+&.accepted{
+  display: block!important
+}
+&.accepted-cookie-policy {
+  opacity: 0;
+  display: none;
+}
+  }
+
+
+
+
+
+
+
+
+
+
+}

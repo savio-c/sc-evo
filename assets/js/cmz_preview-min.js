@@ -1,0 +1,1 @@
+!function(o){wp.customize("logo_img_ID",function(n){n.bind(function(n){o("#logo").html(n)})}),wp.customize("logo_alt_ID",function(n){n.bind(function(n){o("#logo").html(n)})})}(jQuery);

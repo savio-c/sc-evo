@@ -1,0 +1,132 @@
+// componente button finale
+@mixin component__button {
+  .btn {
+    @include button-size;
+    @include button-color;
+    @include button-base;
+    @include button-clear;
+    @include button-link;
+    @include button-block;
+    @include button-hollow;
+  }
+}
+// Button size definisce fontsize e padding
+@mixin button-size {
+  font-size: rem-calc(map-get(map-get($buttons-list, default), 'font-size'));
+  padding: map-get(map-get($buttons-list, default), 'padding');
+  height: rem-calc(map-get(map-get($buttons-list, default), 'height'));
+  @each $button-name, $button-options in map-remove($buttons-list, default) {
+    &.is-#{$button-name} {
+      @if type-of($button-options) == 'map' {
+        @if map-has-key($button-options, 'font-size') {
+          font-size: rem-calc(map-get($button-options, 'font-size'));
+        } @else {
+          @warn 'button-options non ha una proprietà font-size';
+        }
+        @if map-has-key($button-options, 'padding') {
+          padding: map-get($button-options, 'padding');
+        }
+        @if map-has-key($button-options, 'height') {
+          height: rem-calc(map-get($button-options, 'height'));
+        } @else {
+          @warn 'button-options non ha una proprietà padding';
+        }
+      } @else {
+        @warn 'button-options non è una mappa';
+      }
+    }
+  }
+}
+@mixin button-clear {
+  &.clear {
+    border-color: transparent;
+    background-color: transparent;
+    @each $color-name, $rgb in $colors-list {
+      &.is-#{$color-name} {
+        color: color($color-name);
+      }
+    }
+    &:hover{
+      text-decoration: underline;
+      background-color: transparent
+    }
+  }
+}
+@mixin button-link {
+  &.link {
+    border-color: transparent;
+    background-color: transparent;
+    padding:0;
+    height: auto;
+    @each $color-name, $rgb in $colors-list {
+      &.is-#{$color-name} {
+        color: color($color-name);
+      }
+    }
+    &:hover{
+      text-decoration: underline;
+      background-color: transparent
+    }
+  }
+}
+@mixin button-hollow {
+  &.is-hollow {
+
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    @each $color-name, $rgb in $colors-list {
+      &.is-#{$color-name} {
+        border-color: color($color-name);;
+        color: color($color-name);
+      }
+      &:hover{
+        $color-name-hover: $color-name + '-hover';        
+        background-color: color($color-name-hover);
+        color: color-alt(map-get($colors-list, $color-name));
+      }
+    }
+
+  }
+}
+@mixin button-block {
+  &.is-block {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+}
+// Button color definisce il colore dello sfondo per gli status iniziale e hover
+@mixin button-color {
+  @each $color-name, $rgb in $colors-list {
+    $color-name-hover: $color-name + '-hover';
+
+    &.is-#{$color-name} {
+      background-color: color($color-name);
+      color: color-alt(map-get($colors-list, $color-name));
+
+      &:hover {
+        background-color: color($color-name-hover);
+        color: color(color-alt(map-get($colors-list-hover, $color-name-hover)));
+      }
+    }
+  }
+}
+@mixin button-base {
+  @include radius($button-radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: $button-weight;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  border-color: transparent;
+  text-decoration: none;
+  text-transform: $button-text-transform;
+  font-family: $button-font-family;
+  @include transitions($button-transition);
+
+  &:hover {
+    text-decoration: none;
+  }
+}

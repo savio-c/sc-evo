@@ -1,0 +1,21 @@
+@mixin component__subtitle {
+  %subtitle-style {
+    color         :  $subtitle-color;
+    line-height   :  1.6;
+    margin-top    :  0;
+    margin-bottom : 1rem;
+    @include mediaquery(medium) {
+      margin-bottom  :  1.5rem;
+    }
+  }
+
+  @each $size, $font-size in $map-subtitle {
+
+    .subtitle-#{$size} {
+      font-size: rem-calc($font-size);
+      @extend %subtitle-style;
+
+    }
+  }
+
+}
