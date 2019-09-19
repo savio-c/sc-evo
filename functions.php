@@ -104,7 +104,7 @@ function gutenberg_assets() {
   wp_enqueue_style( 'gutenberg', get_theme_file_uri( '/assets/css/app.css' ), false );
 }
 ////////
-require 'plugin-update-checker/plugin-update-checker.php';
+require_once('plugin-update-checker/plugin-update-checker.php');
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'https://github.com/savio-c/sc-evo',
 	__FILE__,
