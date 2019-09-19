@@ -103,6 +103,17 @@ function gutenberg_assets() {
   wp_enqueue_style( 'gutenberg-2', get_theme_file_uri( '/assets/css/editor.css' ), false );
   wp_enqueue_style( 'gutenberg', get_theme_file_uri( '/assets/css/app.css' ), false );
 }
+////////
+require 'plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/savio-c/sc-evo',
+	__FILE__,
+	'sc-evo'
+);
 
+//Optional: If you're using a private repository, specify the access token like this:
+$myUpdateChecker->setAuthentication('6c390f89012fb1888afef775b24c35cb7051d6d0');
 
+//Optional: Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');
  ?>
